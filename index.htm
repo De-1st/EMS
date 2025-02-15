@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/header.css">
+
+  <title>Document</title>
+</head>
+<body>
+
+<!-- Intro Section Starts Here -->
+ <section>
+
+  <!-- Header Section Begins Here -->
+  <header>
+    <img class="site-logo" src="img/icons/EMS.svg" alt="website logo">
+    <div class="header-text">
+      <h2><a href="#intro">Intro</a></h2>
+      <h2><a href="#about">About</a></h2>
+      <h2><a href="#shop">Shop</a></h2>
+    </div>
+    <div id="openModal" class="cart-div">
+      <img src="img/icons/cart.svg" alt="cart logo">
+      <h1 class="cart-num">0</h1>
+    </div>
+
+    <!-- The below code is the pop-up window when clicked on the cart image -->
+    <div id="overlayBox" class="box">
+      <div class="overlayContainer" id="oc">
+        <div class="summaryInfo">
+          <p class="itemList">S/N</p>
+          <p class="itemList">Item</p>
+          <p class="itemList">Price</p>
+          <p class="lastp">Quantity</p>
+        </div>
+        <!-- New container for cart items -->
+        <div id="cartItems"></div>
+        <div class="wrapper">
+          <div class="inputField">
+            <input id="fullName" type="text" placeholder="Full Name">
+            <div id="nameError"></div>
+            
+            <input id="emailE" type="email" placeholder="Email Address">
+            <div id="emailError"></div>
+
+            <input id="cellNumber" class="lastInput" type="tel" autocomplete="tel" placeholder="08012345678">
+            <div id="numberError"></div>
+          </div>
+          <div class="paragraph">
+            <p>Total Amount To Be Paid</p>
+            <span>&#x20A6<p class="secondP">0</p></span>
+          </div>
+          <div class="button">
+            <button id="closeModal" class="btn1">Continue Shopping</button>
+            <button class="btn2">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pop-up window ends here. -->
+
+  </header>
+  <!-- Header Section Ends Here -->
+
+  <!-- Intro Section Starts Here -->
+  <section class="intro-section">
+    <div class="container">
+      <h1 class="intro-text">
+        THE E-MILLENIAL STORE
+      </h1>
+      <img src="img/icons/heroImage.png" alt="section image" class="intro-img">
+    </div>
+    <a href="#shop"><button>SHOP NOW</button></a>
+  </section>
+  
+</section>
+
+<!-- Intro Section Ends Here -->
+ 
+<!-- About Section Starts Here -->
+  <section id="about" class="about-section">
+    <p class="about-text">E-Millenial is an hypothetical online store for gadgets we believe every 'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops, smartwatches and other gadgets. Explore our gadgets and choose the ones that suit you.</p>
+  </section>
+<!-- About Section Ends Here -->
+
+<!-- Shop Section Starts Here -->
+  <section id="shop" class="shop-section">
+    <h1>OUR GADGETS</h1>
+    <div class="grid-section">
+      <div class="product-one-div">
+        <img src="img/products/product1.png" alt="" class="product-one">
+        <div class="price-info">
+          <p id="p-one">Price</p>
+          <p><span>&#x20A6</span>500,000</p>
+        </div>
+        <p>SAMSUNG TV</p>
+        <button class="cartBtn">ADD TO CART</button>
+      </div>
+      <div class="produc-two-div">
+        <img src="img/products/product2.png" alt="" class="product-two">
+        <div class="price-info">
+          <p class="p-one">Price</p>
+          <p><span>&#x20A6</span>250,000</p>
+        </div>
+        <p>PIXEL 4a</p>
+        <button class="cartBtn">ADD TO CART</button>
+     </div>
+     <div class="produc-three-div">
+        <img src="img/products/product3.png" alt="" class="product-three">
+        <div class="price-info">
+          <p class="p-one">Price</p>
+          <p><span>&#x20A6</span>300,000</p>
+        </div>
+        <p>PS5</p>
+        <button class="cartBtn">ADD TO CART</button>
+      </div>
+      <div class="produc-four-div">
+        <img src="img/products/product4.png" alt="" class="product-four">
+        <div class="price-info">
+          <p class="p-one">Price</p>
+          <p><span>&#x20A6</span>800,000</p>
+        </div>
+        <p>MACBOOK AIR</p>
+        <button class="cartBtn">ADD TO CART</button>
+      </div>
+      <div class="produc-five-div">
+        <img src="img/products/product5.png" alt="" class="product-five">
+        <div class="price-info">
+          <p class="p-one">Price</p>
+          <p><span>&#x20A6</span>95,000</p>
+        </div>
+        <p>APPLE WATCH</p>
+        <button class="cartBtn">ADD TO CART</button>
+      </div>
+      <div class="produc-six-div">
+        <img src="img/products/product6.png" alt="" class="product-six">
+        <div class="price-info">
+          <p class="p-one">Price</p>
+          <p><span>&#x20A6</span>40,500</p>
+        </div>
+        <p>AIR PODS</p>
+        <button class="cartBtn">ADD TO CART</button>
+      </div>
+    </div>
+  </section>
+<!-- Shop Section Ends Here -->
+
+<!-- Footer Section Starts Here -->
+<footer>
+  <img src="img/icons/EMS.svg" alt="website logo">
+  <div></div>
+  <p>UI/UX by <a href="www.ustacky.com" target="_blank">Ustacky</a> || Developed by <a href="www.github.com/De-1st" target="_blank">Kell Ojoma</a> </p>
+  <div></div>
+</footer>
+<!-- Footer Section Ends Here -->
+
+  <script src="script.js"></script>
+</body>
+</html>
