@@ -323,6 +323,7 @@ div div .wrapper {
     }
     .grid-section div:hover > .price-info {
       /* Show the .price-info class content on hover */
+      visibility: visible;
       display: block;
       position: absolute;
       margin-top: 10px;
