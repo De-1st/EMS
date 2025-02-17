@@ -294,9 +294,10 @@ div div .wrapper {
     place-self: center;
     margin-top: 70px;
   }
-    .grid-section div {
+    .grid-section > div {
       width: 370px;
       position: relative;
+      overflow: hidden;
     }
     .grid-section div img {
       width: 100%;
@@ -304,33 +305,34 @@ div div .wrapper {
       object-fit: cover;
       border-radius: 10px;
     }
-    .grid-section div:hover::after{
-      content: attr(data-info);/* Show the value of the data-info attribute */
-      background-color: black;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
+    .grid-section div:hover::after {
+      content: ""; /* Changed from attr(data-info) */
       position: absolute;
-      opacity: .5;
-
       top: 45%;
       left: 0;
       right: 0;
       bottom: 23%;
+      background: rgba(0, 0, 0, 0.5);
+      -webkit-border-radius: 0 0 10px 10px;
+      -moz-border-radius: 0 0 10px 10px;
+      border-radius: 0 0 10px 10px;
+      z-index: 1; /* Added z-index */
     }
     .grid-section div .price-info {
-      /* Hide the .price-info class content */
-      display: none; 
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2; /* Higher than overlay */
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease;
+      -moz-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      color: white;
     }
     .grid-section div:hover > .price-info {
-      /* Show the .price-info class content on hover */
-      visibility: visible;
-      display: block;
-      position: absolute;
-      margin-top: 10px;
-
-      top: 45%;
-      color: white;
-      z-index: 1;
+      opacity: 1; /* Smoother transition */
     }
     .grid-section div p{
       text-align: center;
